@@ -1,23 +1,42 @@
 package com.example.picture;
 
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.app.Activity;
-import android.view.Menu;
+import android.content.Intent;
 
 public class MainActivity extends Activity {
-
+	private Button doPhoto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+        
+        doPhoto = (Button)findViewById(R.id.makePicture);
+        doPhoto.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				
+			}
+		});
+        
+        findViewById(R.id.drawPicture).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				pictureDraw();
+				
+			}
+		});
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+    } 
     
+    private void pictureDraw(){
+    	Intent intent = new Intent(this, DrawONpicture.class);
+		startActivity(intent);
+    }
 }
