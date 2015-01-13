@@ -1,0 +1,2 @@
+C:\Users\FastFive\AndroidStudioProjects\Picture\app\build\intermediates\classes\debug
+C:\Users\FastFive\AndroidStudioProjects\Picture\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-01afd16af15ac46808a4fd47a3c8677af06c54e7.jar
